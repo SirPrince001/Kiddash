@@ -11,11 +11,6 @@ app.use(routes)
 app.use(cors());
 require('./src/data/db').connect()
 
-app.get('/' ,(response)=>{
-    response.json({
-        status: 'Successful',
-        response:'Welcome to Quiz Api'
-    })
-})
+
 
 module.exports = app;
