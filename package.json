@@ -4,7 +4,9 @@
   "description": "A quiz app for kids",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit" : "git add . ; git commit",
+    "push":"git push Origin HEAD"
   },
   "author": "Prince Bassey",
   "license": "ISC",
