@@ -36,13 +36,13 @@ exports.registerUser = async (request, response, next) => {
     return response.status(400).json({
       status: "Error",
       message:
-        "Cannot save User, Username already exist Please try again with another Username",
+        "Cannot save User, User already exist with this email Please try again with another Email Address",
     });
   }
 };
 
 exports.userLogin = async (request, response, next) => {
-  const loginUser = await User.findOne({ username: request.body.username });
+  const loginUser = await User.findOne({ email: request.body.email });
   if (!loginUser)
     return response.status(400).json({
       error: true,
