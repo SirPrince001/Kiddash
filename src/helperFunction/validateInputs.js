@@ -24,6 +24,6 @@ const validate = (request, response, next) => {
 };
 
 module.exports = {
-  validationResult,
+  validateUserInput,
   validate,
 };
