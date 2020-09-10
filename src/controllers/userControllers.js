@@ -42,7 +42,7 @@ exports.registerUser = async (request, response, next) => {
 };
 
 exports.userLogin = async (request, response, next) => {
-  const loginUser = await User.findOne({ email: request.body.emailyyyy });
+  const loginUser = await User.findOne({ email: request.body.email});
   if (!loginUser)
     return response.status(400).json({
       error: true,
