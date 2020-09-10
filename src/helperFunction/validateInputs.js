@@ -2,11 +2,12 @@ const { body, validationResult } = require("express-validator");
 
 const validateUserInput = () => [
   body("email").isEmail().withMessage("Provide a Valid Email"),
-  body("email").notEmpty("Email field cannot be empty"),
+ 
   body("password")
     .isLength({ min: 6 })
     .withMessage("Password must be atleast 6 char long"),
   body("password").notEmpty().withMessage("Password field cannot be empty"),
+  
 ];
 
 const validate = (request, response, next) => {
