@@ -19,7 +19,7 @@ exports.setEasyComputerQuestions = async(request,reponse,next)=>{
 }
 
 exports.getEasyComputerQuestions = async(request,response,next) =>{
-    let results = await Computer.find({}).limit(4)
+    let results = await Computer.find({})
     return response.status(200).json({
         status:'Sucessful',
         output:results

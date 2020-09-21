@@ -21,7 +21,7 @@ exports.setEasyBasicScienceQuestion = async (request,response,next) => {
 
 
 exports.getAllEasyBasicScienceQuestions = async(request,response,next)=>{
-    let allResults = await Basic.find({}).limit(4)
+    let allResults = await Basic.find({})
     console.log(allResults)
     return response.status(200).json({
         
