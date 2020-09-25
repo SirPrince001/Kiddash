@@ -2,12 +2,13 @@ const bTech = require('../models/basic_tech')
 require('dotenv').config() 
 
 exports.setBasicTechnologyQuestion = (async(request , response)=>{
-    let {Question , category , choice ,level ,answer } = request.body
+    let {setQuestion , category , choice ,level ,answers } = request.body
 
     let newBasicT = new bTech({
-        Question ,category ,choice,level,answer
+        setQuestion ,category ,choice,level,answers
     })
     let data = await newBasicT.save()
+    console.log(data)
     return response.status(200).json({
         response: 'Successful',
         results : data

@@ -34,6 +34,7 @@ let basicTech = new Schema({
       },
     },
   ],
+  
 });
 
-module.exports = mongoose.model("Basic_Technology", basicTech);
+module.exports = mongoose.model("BasicTechnology", basicTech);
